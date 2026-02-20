@@ -13,7 +13,8 @@ interface ChatInterfaceProps {
     onBack: () => void;
 }
 
-const GEMINI_API_KEY = (typeof process !== 'undefined' && process.env?.GEMINI_API_KEY) || '';
+// @ts-ignore — Vite replaces process.env.GEMINI_API_KEY at build time via define config
+const GEMINI_API_KEY: string = process.env.GEMINI_API_KEY || '';
 const GEMINI_MODEL = 'gemini-2.5-flash';
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
@@ -121,7 +122,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ analysisResults, onBack }
     const systemContext = buildSystemContext(analysisResults);
 
     useEffect(() => {
-        if (!GEMINI_API_KEY || GEMINI_API_KEY === 'PLACEHOLDER_API_KEY') {
+        if (!GEMINI_API_KEY || GEMINI_API_KEY === 'PLACEHOLDER_API_KEY' || GEMINI_API_KEY === '') {
             setApiKeyMissing(true);
         }
         // Welcome message
