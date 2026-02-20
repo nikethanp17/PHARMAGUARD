@@ -20,7 +20,7 @@ const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GE
 
 function buildSystemContext(results: AnalysisResponse[]): string {
     const lines: string[] = [
-        'You are PharmaGuard AI — a brilliant, engaging, and friendly health & genetics expert.',
+        'You are Your Genes AI — a brilliant, engaging, and friendly health & genetics expert.',
         'You are knowledgeable across ALL areas of health, medicine, genetics, genomics, nutrition, disease risk, wellness, and precision medicine.',
         'You are enthusiastic, warm, and genuinely helpful. You LOVE answering questions and helping people understand their health.',
         '',
@@ -128,7 +128,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ analysisResults, onBack }
         // Welcome message
         setMessages([{
             role: 'assistant',
-            content: `👋 **Welcome to PharmaGuard AI Chat!**\n\nI'm your personal health & genetics assistant powered by Gemini 2.5 Flash. I have full access to your analysis results for **Patient ${analysisResults[0]?.patient_id}**.\n\nI'm here to help you explore:\n- 🧬 **Your genetic profile** — what your variants mean and how they affect you\n- 💊 **Drug interactions** — risk levels, dosing, alternatives, and CPIC guidelines\n- 🔬 **Biological mechanisms** — how your enzymes process medications\n- 🏥 **Disease risk & health** — how genetics relates to overall health and wellness\n- 🥗 **Nutrition & lifestyle** — how your genes affect how you process food, exercise, and more\n- 🧠 **Anything health-related** — ask me anything about genetics, medicine, or wellness!\n\nI love answering questions, so don't hold back — ask me anything! 🚀`,
+            content: `👋 **Welcome to Your Genes AI Chat!**\n\nI'm your personal health & genetics assistant powered by Gemini 2.5 Flash. I have full access to your analysis results for **Patient ${analysisResults[0]?.patient_id}**.\n\nI'm here to help you explore:\n- 🧬 **Your genetic profile** — what your variants mean and how they affect you\n- 💊 **Drug interactions** — risk levels, dosing, alternatives, and CPIC guidelines\n- 🔬 **Biological mechanisms** — how your enzymes process medications\n- 🏥 **Disease risk & health** — how genetics relates to overall health and wellness\n- 🥗 **Nutrition & lifestyle** — how your genes affect how you process food, exercise, and more\n- 🧠 **Anything health-related** — ask me anything about genetics, medicine, or wellness!\n\nI love answering questions, so don't hold back — ask me anything! 🚀`,
             timestamp: new Date()
         }]);
     }, []);
@@ -234,7 +234,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ analysisResults, onBack }
                     </div>
                     <div>
                         <h1 style={{ fontSize: '18px', fontWeight: 800, color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            PharmaGuard AI Chat
+                            🧬 Your Genes AI Chat
                             <span style={{ fontSize: '10px', fontWeight: 700, color: '#a78bfa', background: 'rgba(139,92,246,0.15)', padding: '2px 8px', borderRadius: '6px', border: '1px solid rgba(139,92,246,0.2)' }}>Gemini 2.5 Flash</span>
                         </h1>
                         <p style={{ fontSize: '10px', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1.5px' }}>Interactive Clinical Pharmacogenomics Assistant</p>
@@ -368,7 +368,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ analysisResults, onBack }
                                             <div style={{ width: '24px', height: '24px', background: 'linear-gradient(135deg, #8b5cf6, #ec4899)', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                                 <i className="fas fa-robot" style={{ fontSize: '11px', color: '#fff' }}></i>
                                             </div>
-                                            <span style={{ fontSize: '11px', fontWeight: 700, color: '#8b5cf6' }}>PharmaGuard AI</span>
+                                            <span style={{ fontSize: '11px', fontWeight: 700, color: '#8b5cf6' }}>Your Genes AI</span>
                                             <span style={{ fontSize: '9px', color: '#cbd5e1' }}>{msg.timestamp.toLocaleTimeString()}</span>
                                         </div>
                                     )}

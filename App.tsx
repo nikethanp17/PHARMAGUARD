@@ -274,7 +274,7 @@ const App: React.FC = () => {
               <i className="fas fa-dna" style={{ fontSize: '20px', color: '#fff' }}></i>
             </div>
             <div>
-              <h1 style={{ fontSize: '22px', fontWeight: 800, color: '#fff', letterSpacing: '-0.5px' }}>PharmaGuard CDSS</h1>
+              <h1 style={{ fontSize: '22px', fontWeight: 800, color: '#fff', letterSpacing: '-0.5px' }}>🧬 Your Genes</h1>
               <p style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px' }}>Pharmacogenomic Risk Prediction System</p>
             </div>
           </div>
@@ -424,7 +424,7 @@ const App: React.FC = () => {
               <i className="fas fa-database" style={{ marginRight: '4px', color: '#3b82f6' }}></i>CPIC v4.1
             </span>
           </div>
-          <span style={{ color: '#334155', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase' }}>RIFT 2026 • PharmaGuard</span>
+          <span style={{ color: '#334155', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase' }}>RIFT 2026 • Your Genes</span>
         </footer>
       </div>
     );
@@ -451,7 +451,7 @@ const App: React.FC = () => {
             <i className="fas fa-dna" style={{ fontSize: '16px', color: '#fff' }}></i>
           </div>
           <div>
-            <h1 style={{ fontSize: '18px', fontWeight: 800, color: '#fff' }}>PharmaGuard CDSS</h1>
+            <h1 style={{ fontSize: '18px', fontWeight: 800, color: '#fff' }}>🧬 Your Genes</h1>
             <p style={{ fontSize: '10px', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1.5px' }}>Analysis Results</p>
           </div>
         </div>
@@ -705,7 +705,7 @@ const App: React.FC = () => {
             <i className="fas fa-database" style={{ marginRight: '4px', color: '#3b82f6' }}></i>CPIC v4.1
           </span>
         </div>
-        <span style={{ color: '#cbd5e1', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase' }}>RIFT 2026 • PharmaGuard</span>
+        <span style={{ color: '#cbd5e1', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase' }}>RIFT 2026 • Your Genes</span>
       </footer>
     </div>
   );
