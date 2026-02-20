@@ -1,0 +1,7 @@
+{
+  "source_directories": [
+    {"root": "backend"},
+    {"root": "."}
+  ],
+  "python_version": "3.11"
+}

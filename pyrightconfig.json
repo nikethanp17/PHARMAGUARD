@@ -1,0 +1,21 @@
+{
+    "include": [
+        "backend"
+    ],
+    "pythonVersion": "3.11",
+    "typeCheckingMode": "basic",
+    "reportMissingImports": false,
+    "reportMissingModuleSource": false,
+    "extraPaths": [
+        ".",
+        "backend"
+    ],
+    "executionEnvironments": [
+        {
+            "root": "backend",
+            "extraPaths": [
+                "."
+            ]
+        }
+    ]
+}

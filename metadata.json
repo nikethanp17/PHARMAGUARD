@@ -1,0 +1,5 @@
+{
+  "name": "PharmaGuard CDSS Phase 1",
+  "description": "A production-grade, deterministic Pharmacogenomic Clinical Decision Support System (CDSS) for CPIC-aligned allele-to-recommendation mapping.",
+  "requestFramePermissions": []
+}
