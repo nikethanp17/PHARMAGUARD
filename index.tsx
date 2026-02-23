@@ -1,16 +1,29 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './src/auth/AuthContext';
+import AppInner from './App';
+
+const AppWrapper: React.FC = () => {
+  const [sessionExpired, setSessionExpired] = useState(false);
+  return (
+    <BrowserRouter>
+      <AuthProvider onSessionTimeout={() => setSessionExpired(true)}>
+        <AppInner
+          sessionExpired={sessionExpired}
+          onSessionExpiredDismiss={() => setSessionExpired(false)}
+        />
+      </AuthProvider>
+    </BrowserRouter>
+  );
+};
 
 const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
+if (!rootElement) throw new Error('Could not find root element to mount to');
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <App />
+    <AppWrapper />
   </React.StrictMode>
 );
