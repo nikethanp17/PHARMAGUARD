@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import type { PasswordStrength } from '../auth/types';
 import { useAuth } from '../auth/AuthContext';
 import { checkRateLimit } from '../auth/authService';
@@ -320,29 +320,13 @@ export const LoginPage: React.FC = () => {
     return (
         <div style={S.page}>
             {/* Home button — top-left corner */}
-            <button
-                onClick={() => navigate('/')}
-                style={{
-                    position: 'fixed', top: '20px', left: '20px',
-                    display: 'flex', alignItems: 'center', gap: '8px',
-                    padding: '8px 16px',
-                    background: 'rgba(255,255,255,0.06)',
-                    border: '1px solid rgba(255,255,255,0.12)',
-                    borderRadius: '12px',
-                    color: '#e2e8f0',
-                    fontSize: '13px', fontWeight: 700,
-                    cursor: 'pointer',
-                    backdropFilter: 'blur(12px)',
-                    fontFamily: "'Inter', system-ui, sans-serif",
-                    zIndex: 50,
-                    transition: 'background 0.2s',
-                }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.12)')}
-                onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.06)')}
+            <Link
+                to="/"
+                className="fixed top-4 left-4 z-50 flex items-center space-x-2 px-4 py-2 bg-slate-800/50 backdrop-blur-md rounded-lg border border-slate-700 text-white hover:bg-slate-700/50 transition-all"
             >
-                <DNAIcon size={16} className="" style={{ color: '#3b82f6' }} />
-                Home
-            </button>
+                <DNAIcon size={20} className="text-blue-500" />
+                <span className="text-sm font-medium">Home</span>
+            </Link>
             <div style={S.card}>
                 <AuthHeader />
 
